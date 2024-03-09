@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container d-flex mt-5 justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 mb-3">
+            <div class="card shadow">
+                <img src="https://images.unsplash.com/photo-1468956398224-6d6f66e22c35?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Register</h5>
+                    <form action="/register" method="POST" class="validated-form" novalidate>
+                        <div class ="mb-3">
+                            <label class ="form-label" for="username">Username</label>
+                            <input class ="form-control" type="text" id="username" name="username" autofocus required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                    
+                        <div class ="mb-3">
+                            <label class ="form-label" for="email">Email</label>
+                            <input class ="form-control" type="email" id="email" name="email" required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                    
+                        <div class ="mb-3">
+                            <label class ="form-label" for="password">Password</label>
+                            <input class ="form-control" type="password" id="password" name="password" required>
+                            <div class="valid-feedback">
+                                Looks Good!
+                            </div>
+                        </div>
+                        <button class="btn btn-success w-100">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
