@@ -34,7 +34,7 @@ const MongoStore = require('connect-mongo');
 // );
 
 // const dbUrl = process.env.DB_URL
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp-camp'||process.env.DB_URL;
+const dbUrl = process.env.DB_URL||'mongodb://127.0.0.1:27017/yelp-camp';
 // 'mongodb://127.0.0.1:27017/yelp-camp'
 mongoose.connect(dbUrl)//farmStand database shuoldbe created for us
 .then(()=> {
@@ -65,7 +65,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(mongoSanitize());
-const secret = 'thisshouldbeabettersecret!'|| process.env.SECRET;
+const secret = process.env.SECRET||'thisshouldbeabettersecret';
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
